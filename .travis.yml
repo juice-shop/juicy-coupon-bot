@@ -14,9 +14,9 @@ env:
 jobs:
   include:
     - stage: lint
-    install: npm install standard
-    script: npm run lint
+      install: npm install standard
+      script: npm run lint
     - stage: tweet
-    if: type = cron
-    install: npm i -g juicy-coupon-bot
-    script: juicy-coupon-bot
+      if: type = cron
+      install: npm i -g juicy-coupon-bot
+      script: juicy-coupon-bot
