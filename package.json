@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
   "main": "index.js",
-  "preferGlobal": true,
+  "private": true,
   "bin": {
     "juicy-coupon-bot": "bin/juicy-coupon-bot.js"
   },
