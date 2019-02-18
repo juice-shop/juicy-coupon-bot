@@ -1,0 +1,9 @@
+build/
+.nyc_output/
+
+# Intellij
+.idea/
+*.iml
+
+# NPM
+node_modules/
