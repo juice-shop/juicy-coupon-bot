@@ -38,7 +38,7 @@ function generateCoupon (discount, date) {
 }
 
 function randomDiscount () {
-  return 10 * Math.floor((Math.random() * 4) + 1)
+  return 10 * (Math.floor(Math.random() * 4) + 1) // 10-40%
 }
 
 function generateStatus () {
@@ -47,7 +47,13 @@ function generateStatus () {
   const coupon = generateCoupon(discount, date)
   const expiration = expirationDate(date)
 
-  return `Enjoy ${discount}% off all our juicy products with this #coupon code: ${coupon} (valid until ${expiration})`
+  const texts = [
+    `[🤖] Enjoy ${discount}% off all our juicy products with this #coupon code: ${coupon} (valid until ${expiration})`,
+    `[🤖] Save ${discount}% during your next shopping frenzy with #coupon code: ${coupon} (expires ${expiration})`,
+    `[🤖] All your favorite juices are now ${discount}% off! Only with #coupon code: ${coupon} (use before ${expiration})`
+  ]
+
+  return texts[Math.floor(Math.random() * texts.length)]
 }
 
 module.exports = () => {
