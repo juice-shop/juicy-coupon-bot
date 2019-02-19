@@ -72,7 +72,4 @@ module.exports = () => {
   } else {
     console.log(`[${colors.yellow('⏭')}] Skipped Tweet: ${colors.yellow('Coupon codes will only be tweeted when running inside Travis-CI Cron Job')}`)
   }
-
-
-
 }
