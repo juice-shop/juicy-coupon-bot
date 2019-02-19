@@ -13,4 +13,4 @@ deploy:
   provider: script
   script: juicy-coupon-bot
   on:
-    condition: "$TRAVIS_EVENT_TYPE" == "cron"
+    condition: "\"$TRAVIS_EVENT_TYPE\" == \"cron\""
