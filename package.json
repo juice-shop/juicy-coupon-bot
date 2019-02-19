@@ -58,7 +58,7 @@
     "all": true,
     "reporter": [
       "lcov",
-      "text"
+      "text-summary"
     ]
   }
 }

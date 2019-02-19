@@ -1,6 +1,7 @@
 # juicy-coupon-bot [![npm Downloads](https://img.shields.io/npm/dm/juicy-coupon-bot.svg)](https://www.npmjs.com/package/juicy-coupon-bot)
 
 [![Build Status](https://secure.travis-ci.org/bkimminich/juicy-coupon-bot.png?branch=master)](http://travis-ci.org/bkimminich/juicy-coupon-bot)
+[![Coverage Status](https://coveralls.io/repos/github/bkimminich/juicy-coupon-bot/badge.svg?branch=master)](https://coveralls.io/github/bkimminich/juicy-coupon-bot?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Coupon code generator and distribution bot for OWASP Juice Shop
