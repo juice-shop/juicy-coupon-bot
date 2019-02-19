@@ -1,3 +1,4 @@
+const colors = require('colors')
 const z85 = require('z85')
 const Twitter = require('twitter')
 const T = new Twitter({
@@ -57,11 +58,21 @@ function generateStatus () {
 }
 
 module.exports = () => {
-  T.post('statuses/update', { status: generateStatus() })
-    .then(function (tweet) {
-      console.log(tweet)
-    })
-    .catch(function (error) {
-      throw error
-    })
+  console.log()
+  const status = generateStatus()
+  console.log(`[${colors.green('✔')}] Status prepared: ${colors.cyan(status)}`)
+  if (process.env.TRAVIS_EVENT_TYPE === 'cron') {
+    T.post('statuses/update', { status })
+      .then(function (tweet) {
+        console.log(`[${colors.green('✔')}] Tweet published: ${tweet}`)
+      })
+      .catch(function (error) {
+        console.log(`[${colors.red('❌')}] Tweet failed: ${colors.red(error)}`)
+      })
+  } else {
+    console.log(`[${colors.yellow('⏭')}] Skipped Tweet: ${colors.yellow('Coupon codes will only be tweeted when running inside Travis-CI Cron Job')}`)
+  }
+
+
+
 }
