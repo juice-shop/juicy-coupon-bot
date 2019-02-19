@@ -17,7 +17,7 @@ describe('Coupon code', () => {
     expect(generateCoupon(10, new Date(2019, 10, 1))).to.equal('pes[Biv#%t')
     expect(generateCoupon(10, new Date(2019, 11, 1))).to.equal('l}6D$iv#%t')
   })
-  
+
   it('should by valid in current month by default', () => {
     expect(generateCoupon(10)).to.equal(generateCoupon(10, new Date()))
   })
