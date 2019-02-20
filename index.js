@@ -9,7 +9,6 @@ const T = new Twitter({
 const statusText = require('./lib/statusText')
 
 module.exports = (status = statusText()) => {
-  console.log()
   console.log(`[${colors.green('✔')}] Status prepared: ${colors.cyan(status)}`)
   if (process.env.TRAVIS_EVENT_TYPE === 'cron') {
     T.post('statuses/update', { status })
