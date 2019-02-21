@@ -5,5 +5,5 @@ const juicyCouponBot = require('../index')
 try {
   juicyCouponBot()
 } catch (error) {
-  console.log(`[${colors.red('☠')}] Unhandled error: ${colors.red(error.message)}`)
+  console.log(`[${colors.red('❌')}] Critical error: ${colors.red(error.message)}`)
 }
