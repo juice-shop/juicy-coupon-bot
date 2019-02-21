@@ -1,0 +1,22 @@
+const chai = require('chai')
+const expect = chai.expect
+const currentCoupons = require('../lib/currentCoupons')
+
+describe('Current coupons', () => {
+  it('contains expiration date', () => {
+    const coupons = currentCoupons()
+    expect(coupons).to.have.property('expiryDate')
+  })
+
+  it('contains discount codes from 10% to 40%', () => {
+    const coupons = currentCoupons()
+    expect(coupons).to.have.nested.property('discountCodes.10%')
+    expect(coupons).to.have.nested.property('discountCodes.20%')
+    expect(coupons).to.have.nested.property('discountCodes.30%')
+    expect(coupons).to.have.nested.property('discountCodes.40%')
+  })
+
+  it('throws error when API lookup fails', () => {
+    expect(() => currentCoupons('https://httpstat.us/500')).to.throw()
+  })
+})
