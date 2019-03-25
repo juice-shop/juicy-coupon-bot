@@ -29,7 +29,11 @@ juicy-coupon-bot
 > and a [Twitter App](https://developer.twitter.com/en/apps) and
 > obviously provide your own keys and tokens for the environment
 > variables `TWITTER_CONSUMER_KEY`, `TWITTER_CONSUMER_SECRET`,
-> `TWITTER_ACCESS_TOKEN_KEY` and `TWITTER_ACCESS_TOKEN_SECRET`.
+> `TWITTER_ACCESS_TOKEN_KEY` and `TWITTER_ACCESS_TOKEN_SECRET`. For
+> Reddit integration you additionally need a
+> [Reddit App](https://www.reddit.com/prefs/apps) and have to define the
+> environment variables `REDDIT_ACCOUNT_NAME`,
+> `REDDIT_ACCOUNT_PASSWORD`, `REDDIT_APP_ID` and `REDDIT_APP_SECRET`.
 
 ## License
 
