@@ -1,4 +1,4 @@
-# juicy-coupon-bot [![npm Downloads](https://img.shields.io/npm/dm/juicy-coupon-bot.svg)](https://www.npmjs.com/package/juicy-coupon-bot)
+# ![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juicy-coupon-bot/master/JuicyCouponBot_8bit_Avatar.png) juicy-coupon-bot [![npm Downloads](https://img.shields.io/npm/dm/juicy-coupon-bot.svg)](https://www.npmjs.com/package/juicy-coupon-bot)
 
 [![Build Status](https://secure.travis-ci.org/bkimminich/juicy-coupon-bot.png?branch=master)](http://travis-ci.org/bkimminich/juicy-coupon-bot)
 [![Coverage Status](https://coveralls.io/repos/github/bkimminich/juicy-coupon-bot/badge.svg?branch=master)](https://coveralls.io/github/bkimminich/juicy-coupon-bot?branch=master)
