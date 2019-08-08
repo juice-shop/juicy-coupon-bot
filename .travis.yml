@@ -22,4 +22,3 @@ deploy:
   script: juicy-coupon-bot
   on:
     condition: '"$TRAVIS_EVENT_TYPE" == "cron"'
-    branch: facebook_posts
