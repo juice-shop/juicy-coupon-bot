@@ -34,6 +34,12 @@ juicy-coupon-bot
 > [Reddit App](https://www.reddit.com/prefs/apps) and have to define the
 > environment variables `REDDIT_ACCOUNT_NAME`,
 > `REDDIT_ACCOUNT_PASSWORD`, `REDDIT_APP_ID` and `REDDIT_APP_SECRET`.
+> For Facebook integration you additionally need a
+> [Facebook App](https://developers.facebook.com/apps) permitted to
+> write to the
+> [OWASP Juice Shop Facebook page](https://www.facebook.com/owasp.juiceshop)
+> and have to provide the environment variables `FACEBOOK_ACCESS_TOKEN`
+> and `FACEBOOK_APP_SECRET`.
 
 ## License
 
