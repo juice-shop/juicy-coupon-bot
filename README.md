@@ -43,4 +43,4 @@ juicy-coupon-bot
 
 ## License
 
-Copyright (c) 2019 Bjoern Kimminich Licensed under the MIT license.
+Copyright (c) 2019-2020 Bjoern Kimminich Licensed under the MIT license.
