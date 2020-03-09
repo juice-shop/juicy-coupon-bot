@@ -3,6 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/bkimminich/juicy-coupon-bot.png?branch=master)](http://travis-ci.org/bkimminich/juicy-coupon-bot)
 [![Coverage Status](https://coveralls.io/repos/github/bkimminich/juicy-coupon-bot/badge.svg?branch=master)](https://coveralls.io/github/bkimminich/juicy-coupon-bot?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbkimminich%2Fjuicy-coupon-bot.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbkimminich%2Fjuicy-coupon-bot?ref=badge_shield)
 
 Coupon code generator and distribution bot for OWASP Juice Shop
 
@@ -44,3 +45,6 @@ juicy-coupon-bot
 ## License
 
 Copyright (c) 2019-2020 Bjoern Kimminich Licensed under the MIT license.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbkimminich%2Fjuicy-coupon-bot.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbkimminich%2Fjuicy-coupon-bot?ref=badge_large)
