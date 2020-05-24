@@ -2,29 +2,37 @@
   "name": "juicy-coupon-bot",
   "version": "1.1.0",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
-  "main": "index.js",
-  "preferGlobal": true,
-  "bin": {
-    "juicy-coupon-bot": "bin/juicy-coupon-bot.js"
-  },
-  "scripts": {
-    "lint": "standard",
-    "lint:fix": "standard --fix",
-    "test": "nyc mocha test",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  "homepage": "http://owasp-juice.shop",
+  "bugs": {
+    "url": "https://github.com/bkimminich/juicy-coupon-bot/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bkimminich/juicy-coupon-bot.git"
   },
-  "author": "Bjoern Kimminich <bjoern.kimminich@owasp.org> (https://www.owasp.org/index.php/User:Bjoern_Kimminich)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bkimminich/juicy-coupon-bot/issues"
+  "author": "Bjoern Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
+  "main": "index.js",
+  "bin": {
+    "juicy-coupon-bot": "bin/juicy-coupon-bot.js"
   },
-  "homepage": "http://owasp-juice.shop",
-  "engines": {
-    "node": "12"
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "nyc mocha test"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "lib/*.js",
+      "index.js"
+    ],
+    "report-dir": "./build/reports/coverage",
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
   },
   "dependencies": {
     "colors": "^1.4.0",
@@ -41,6 +49,10 @@
     "nyc": "^15.0.0",
     "standard": "^14.3.1"
   },
+  "engines": {
+    "node": "12"
+  },
+  "preferGlobal": true,
   "standard": {
     "env": [
       "node",
@@ -50,18 +62,6 @@
       "it",
       "describe",
       "beforeEach"
-    ]
-  },
-  "nyc": {
-    "report-dir": "./build/reports/coverage",
-    "include": [
-      "lib/*.js",
-      "index.js"
-    ],
-    "all": true,
-    "reporter": [
-      "lcov",
-      "text-summary"
     ]
   }
 }
