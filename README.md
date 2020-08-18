@@ -1,5 +1,6 @@
-# ![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juicy-coupon-bot/master/JuicyCouponBot_8bit_Avatar.png) juicy-coupon-bot [![npm Downloads](https://img.shields.io/npm/dm/juicy-coupon-bot.svg)](https://www.npmjs.com/package/juicy-coupon-bot)
+# ![Juice Shop Logo](https://raw.githubusercontent.com/bkimminich/juicy-coupon-bot/master/JuicyCouponBot_8bit_Avatar.png) Juicy Coupon Bot
 
+[![npm Downloads](https://img.shields.io/npm/dm/juicy-coupon-bot.svg)](https://www.npmjs.com/package/juicy-coupon-bot)
 [![Build Status](https://secure.travis-ci.org/bkimminich/juicy-coupon-bot.png?branch=master)](http://travis-ci.org/bkimminich/juicy-coupon-bot)
 [![Coverage Status](https://coveralls.io/repos/github/bkimminich/juicy-coupon-bot/badge.svg?branch=master)](https://coveralls.io/github/bkimminich/juicy-coupon-bot?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
@@ -41,6 +42,8 @@ juicy-coupon-bot
 > and have to provide the environment variables `FACEBOOK_ACCESS_TOKEN`
 > and `FACEBOOK_APP_SECRET`.
 
-## License
+## Licensing [![license](https://img.shields.io/github/license/bkimminich/juicy-coupon-bot.svg)](LICENSE)
 
-Copyright (c) 2019-2020 Bjoern Kimminich Licensed under the MIT license.
+This program is free software: you can redistribute it and/or modify it
+under the terms of the [MIT license](LICENSE). Juicy Coupon Bot and any
+contributions are Copyright © by Bjoern Kimminich 2019-2020.
