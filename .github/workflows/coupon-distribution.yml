@@ -1,0 +1,21 @@
+name: "Monthly Coupon Distribution"
+on:
+  schedule:
+    - cron:  '1 1 1 * *'
+  push: # TODO Remove after successful testing!
+    branches:
+      - '*'
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Check out Git repository"
+        uses: actions/checkout@v2
+      - name: "Use Node.js 12"
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: "Install latest published module from NPM"
+        run: npm i -g juicy-coupon-bot
+      - name: "Distribute coupons"
+        run: juicy-coupon-bot
