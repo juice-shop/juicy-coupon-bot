@@ -17,5 +17,8 @@ jobs:
           node-version: 12
       - name: "Install latest published module from NPM"
         run: npm i -g juicy-coupon-bot
+      - name: "Activate publishing mode"
+        run: |
+          echo "TRAVIS_EVENT_TYPE=cron" >> $GITHUB_ENV
       - name: "Distribute coupons"
         run: juicy-coupon-bot
