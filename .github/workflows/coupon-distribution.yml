@@ -16,12 +16,14 @@ jobs:
         with:
           node-version: 12
       - name: "Install latest published module from NPM"
-        run: npm i -g juicy-coupon-bot
+#        run: npm i -g juicy-coupon-bot
+        run: npm i
       - name: "Activate publishing mode"
         run: |
           echo "TRAVIS_EVENT_TYPE=cron" >> $GITHUB_ENV
       - name: "Distribute coupons"
-        run: juicy-coupon-bot
+#        run: juicy-coupon-bot
+        run: ./bin/juicy-coupon-bot
         env:
 #          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
 #          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
