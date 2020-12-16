@@ -1,6 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
-const redditComment = require('../lib/redditComment')
+const redditComment = require('../lib/redditPost')
 
 describe('Reddit comment', () => {
   it('should always contain discount amount in bold text', () => {

@@ -16,7 +16,7 @@ jobs:
         run: npm i -g juicy-coupon-bot
       - name: "Activate publishing mode"
         run: |
-          echo "TRAVIS_EVENT_TYPE=cron" >> $GITHUB_ENV
+          echo "PUBLISHING_MODE=true" >> $GITHUB_ENV
       - name: "Distribute coupons"
         run: juicy-coupon-bot
         env:

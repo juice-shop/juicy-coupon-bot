@@ -25,15 +25,15 @@ juicy-coupon-bot
 
 ...and it's done!
 
-> :information_source: You need to set up a
-> [Travis-CI Cron Job](https://docs.travis-ci.com/user/cron-jobs/#adding-cron-jobs)
-> and a [Twitter App](https://developer.twitter.com/en/apps) and
-> obviously provide your own keys and tokens for the environment
-> variables `TWITTER_CONSUMER_KEY`, `TWITTER_CONSUMER_SECRET`,
-> `TWITTER_ACCESS_TOKEN_KEY` and `TWITTER_ACCESS_TOKEN_SECRET`. For
-> Reddit integration you additionally need a
-> [Reddit App](https://www.reddit.com/prefs/apps) and have to define the
-> environment variables `REDDIT_ACCOUNT_NAME`,
+> :information_source: You need to set up a suitable cron job similar to
+> [ours](https://github.com/bkimminich/juicy-coupon-bot/actions?query=workflow%3A%22Monthly+Coupon+Distribution%22).
+> Next you need a [Twitter App](https://developer.twitter.com/en/apps)
+> to which you obviously have to provide your own keys and tokens for
+> the environment variables `TWITTER_CONSUMER_KEY`,
+> `TWITTER_CONSUMER_SECRET`, `TWITTER_ACCESS_TOKEN_KEY` and
+> `TWITTER_ACCESS_TOKEN_SECRET`. For Reddit integration you additionally
+> need a [Reddit App](https://www.reddit.com/prefs/apps) and have to
+> define the environment variables `REDDIT_ACCOUNT_NAME`,
 > `REDDIT_ACCOUNT_PASSWORD`, `REDDIT_APP_ID` and `REDDIT_APP_SECRET`.
 > For Facebook integration you additionally need a
 > [Facebook App](https://developers.facebook.com/apps) permitted to
