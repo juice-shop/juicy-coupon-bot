@@ -14,5 +14,5 @@ module.exports = () => {
 
   publishTweet(twitterStatus(discount, coupon, expiryDate))
   publishFacebook(facebookPost(discount, coupon, expiryDate))
-  publishReddit(redditComment(discount, coupon, expiryDate))
+  publishReddit(redditComment(discount, coupon, expiryDate), `New coupon code (valid until ${expiryDate})`)
 }
