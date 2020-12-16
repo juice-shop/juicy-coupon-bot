@@ -23,7 +23,7 @@ jobs:
           echo "TRAVIS_EVENT_TYPE=cron" >> $GITHUB_ENV
       - name: "Distribute coupons"
 #        run: juicy-coupon-bot
-        run: ./bin/juicy-coupon-bot
+        run: node ./bin/juicy-coupon-bot.js
         env:
 #          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
 #          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
