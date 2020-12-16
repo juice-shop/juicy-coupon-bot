@@ -2,9 +2,6 @@ name: "Monthly Coupon Distribution"
 on:
   schedule:
     - cron:  '1 1 1 * *'
-  push:
-    branches:
-      - '*'
 jobs:
   distribute:
     runs-on: ubuntu-latest
@@ -16,21 +13,19 @@ jobs:
         with:
           node-version: 12
       - name: "Install latest published module from NPM"
-#        run: npm i -g juicy-coupon-bot
-        run: npm i
+        run: npm i -g juicy-coupon-bot
       - name: "Activate publishing mode"
         run: |
           echo "TRAVIS_EVENT_TYPE=cron" >> $GITHUB_ENV
       - name: "Distribute coupons"
-#        run: juicy-coupon-bot
-        run: node ./bin/juicy-coupon-bot.js
+        run: juicy-coupon-bot
         env:
-#          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
-#          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-#          TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
-#          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-#          FACEBOOK_APP_SECRET: ${{ secrets.FACEBOOK_APP_SECRET }}
-#          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          FACEBOOK_APP_SECRET: ${{ secrets.FACEBOOK_APP_SECRET }}
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
           REDDIT_ACCOUNT_NAME: ${{ secrets.REDDIT_ACCOUNT_NAME }}
           REDDIT_ACCOUNT_PASSWORD: ${{ secrets.REDDIT_ACCOUNT_PASSWORD }}
           REDDIT_APP_ID: ${{ secrets.REDDIT_APP_ID }}
