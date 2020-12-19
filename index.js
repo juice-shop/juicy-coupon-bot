@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2019-2021 Bjoern Kimminich.
+ * SPDX-License-Identifier: MIT
+ */
+
 const randomDiscount = require('./lib/randomDiscount')
 const currentCoupons = require('./lib/currentCoupons')
 const twitterStatus = require('./lib/twitterStatus')

@@ -46,4 +46,4 @@ juicy-coupon-bot
 
 This program is free software: you can redistribute it and/or modify it
 under the terms of the [MIT license](LICENSE). Juicy Coupon Bot and any
-contributions are Copyright © by Bjoern Kimminich 2019-2020.
+contributions are Copyright © by Bjoern Kimminich 2019-2021.
