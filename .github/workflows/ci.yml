@@ -20,10 +20,10 @@ jobs:
     steps:
       - name: "Check out Git repository"
         uses: actions/checkout@v2
-      - name: "Use Node.js 12"
+      - name: "Use Node.js 16"
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
           cache: npm
       - name: "Install application"
         run: npm install --ignore-scripts
@@ -34,10 +34,10 @@ jobs:
     steps:
       - name: "Check out Git repository"
         uses: actions/checkout@v2
-      - name: "Use Node.js 12"
+      - name: "Use Node.js 16"
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
           cache: npm
       - name: "Cache Node.js modules"
         uses: actions/cache@v2

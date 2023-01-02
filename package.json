@@ -49,7 +49,7 @@
     "standard": "^14.3.4"
   },
   "engines": {
-    "node": "12-15"
+    "node": "12-18"
   },
   "preferGlobal": true,
   "standard": {
