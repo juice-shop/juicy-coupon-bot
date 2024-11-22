@@ -34,6 +34,7 @@
     ]
   },
   "dependencies": {
+    "@atproto/api": "^0.13.17",
     "colors": "^1.4.0",
     "fbgraph": "^1.4.4",
     "reddit-wrapper-v2": "^1.1.6",

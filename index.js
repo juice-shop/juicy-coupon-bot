@@ -5,11 +5,9 @@
 
 const randomDiscount = require('./lib/randomDiscount')
 const currentCoupons = require('./lib/currentCoupons')
-const twitterStatus = require('./lib/twitterStatus')
-const facebookPost = require('./lib/facebookPost')
+const blueSkyPost = require('./lib/blueSkyPost')
 const redditPost = require('./lib/redditPost')
-const publishTweet = require('./lib/publishTweet')
-const publishFacebook = require('./lib/publishFacebook')
+const publishBlueSky = require('./lib/publishBlueSky')
 const publishReddit = require('./lib/publishReddit')
 
 module.exports = () => {
@@ -17,7 +15,6 @@ module.exports = () => {
   const discount = randomDiscount()
   const coupon = discountCodes[discount + '%']
 
-  publishTweet(twitterStatus(discount, coupon, expiryDate))
-  publishFacebook(facebookPost(discount, coupon, expiryDate))
+  publishBlueSky(blueSkyPost(discount, coupon, expiryDate))
   publishReddit(redditPost(discount, coupon, expiryDate), `New coupon code (valid until ${expiryDate})`)
 }
