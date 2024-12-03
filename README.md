@@ -30,8 +30,7 @@ juicy-coupon-bot
 > Next you need a BlueSky account
 > to which you obviously have to provide your own identifier (i.e. email) and app password for
 > the environment variables `BLUESKY_IDENTIFIER` and
-> `BLUESKY_PASSWORD`. For Reddit integration you additionally
-> need a [Reddit App](https://www.reddit.com/prefs/apps) and have to
+> `BLUESKY_PASSWORD`. For Mastodon integration you have to generate an [Access Token](https://docs.joinmastodon.org/client/authorized/) and pass it in via `MASTODON_TOKEN` along with the `MASTODON_URL` of your instance. For Reddit integration you need a [Reddit App](https://www.reddit.com/prefs/apps) and have to
 > define the environment variables `REDDIT_ACCOUNT_NAME`,
 > `REDDIT_ACCOUNT_PASSWORD`, `REDDIT_APP_ID` and `REDDIT_APP_SECRET`.
 

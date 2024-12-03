@@ -1,6 +1,6 @@
 {
   "name": "juicy-coupon-bot",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
   "homepage": "http://owasp-juice.shop",
   "bugs": {
@@ -36,10 +36,9 @@
   "dependencies": {
     "@atproto/api": "^0.13.17",
     "colors": "^1.4.0",
-    "fbgraph": "^1.4.4",
+    "masto": "^6.10.1",
     "reddit-wrapper-v2": "^1.1.6",
     "sync-request": "^6.1.0",
-    "twitter": "^1.7.1",
     "winston": "^3.2.1"
   },
   "devDependencies": {

@@ -26,3 +26,5 @@ jobs:
           REDDIT_ACCOUNT_PASSWORD: ${{ secrets.REDDIT_ACCOUNT_PASSWORD }}
           REDDIT_APP_ID: ${{ secrets.REDDIT_APP_ID }}
           REDDIT_APP_SECRET: ${{ secrets.REDDIT_APP_SECRET }}
+          MASTODON_URL: ${{ secrets.MASTODON_URL }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
