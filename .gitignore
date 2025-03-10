@@ -1,6 +1,6 @@
 build/
 .nyc_output/
-dist
+dist/
 
 # Intellij
 .idea/
