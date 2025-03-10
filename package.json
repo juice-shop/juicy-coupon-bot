@@ -2,6 +2,7 @@
   "name": "juicy-coupon-bot",
   "version": "2.1.0",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
+  "type": "module",
   "homepage": "http://owasp-juice.shop",
   "bugs": {
     "url": "https://github.com/juice-shop/juicy-coupon-bot/issues"
@@ -46,7 +47,9 @@
     "coveralls": "^3.1.0",
     "mocha": "^7.2.0",
     "nyc": "^15.1.0",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   },
   "engines": {
     "node": "18 - 22"
