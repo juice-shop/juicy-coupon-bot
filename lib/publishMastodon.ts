@@ -3,23 +3,30 @@
  * SPDX-License-Identifier: MIT
  */
 
-const logger = require('./logger')
-const colors = require('colors')
-const createRestAPIClient = require('masto').createRestAPIClient
-const masto = createRestAPIClient({
-  url: process.env.MASTODON_URL,
-  accessToken: process.env.MASTODON_TOKEN
-})
+import logger from './logger.ts';
+import colors from 'colors';
+import { createRestAPIClient } from 'masto';
 
-module.exports = async (status) => {
+const masto = createRestAPIClient({
+  url: process.env.MASTODON_URL!,
+  accessToken: process.env.MASTODON_TOKEN!
+});
+
+const publishMastodon = async (status: string): Promise<void> => {
   if (process.env.PUBLISHING_MODE) {
     try {
       const res = await masto.v1.statuses.create({ status })
       logger.info(`[${colors.green('✔')}] Mastodon post published: ${res.url}`)
     } catch (error) {
-      logger.warn(`[${colors.red('❌')}] Mastodon post failed: ${colors.red(error)}`)
+      if (error instanceof Error) {
+        logger.warn(`[${colors.red('❌')}] Mastodon post failed: ${colors.red(error.message)}`)
+      } else {
+        logger.warn(`[${colors.red('❌')}] Mastodon post failed with unknown error`)
+      }
     }
   } else {
     logger.info(`[${colors.yellow('🟡')}] Mastodon post skipped: ${colors.yellow('Post will only be published when PUBLISHING_MODE is set as an environment variable')}`)
   }
-}
+};
+
+export default publishMastodon;
