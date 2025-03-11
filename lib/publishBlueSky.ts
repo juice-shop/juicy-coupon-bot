@@ -30,7 +30,7 @@ const publishBlueSky = async (post: string): Promise<void> => {
         }
       })
 
-      logger.info(`[${colors.green('✔')}] BlueSky post published: ${JSON.stringify(res)}`)
+      logger.info(`[${colors.green('✔')}] BlueSky post published: ${res?.data?.uri}`)
     } catch (error) {
       if (error instanceof Error) {
         logger.warn(`[${colors.red('❌')}] BlueSky post failed: ${colors.red(error.message)}`)

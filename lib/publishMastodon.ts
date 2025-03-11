@@ -16,7 +16,7 @@ const publishMastodon = async (status: string): Promise<void> => {
   if (process.env.PUBLISHING_MODE) {
     try {
       const res = await masto.v1.statuses.create({ status })
-      logger.info(`[${colors.green('✔')}] Mastodon post published: ${res.url}`)
+      logger.info(`[${colors.green('✔')}] Mastodon post published: ${res?.url}`)
     } catch (error) {
       if (error instanceof Error) {
         logger.warn(`[${colors.red('❌')}] Mastodon post failed: ${colors.red(error.message)}`)
