@@ -12,8 +12,7 @@
   },
   "include": [
     "lib/**/*.ts",
-    "test/**/*.test.ts",
-    "index.js",
+    "index.ts",
     "bin"
   ],
   "exclude": [
