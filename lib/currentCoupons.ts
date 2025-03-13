@@ -10,7 +10,7 @@ export default async (apiEndpoint: string = 'https://5j4d1u7jhf.execute-api.eu-w
   try {
     const res = await fetch(apiEndpoint)
     const body = await res.json()
-    logger.info(`[${colors.green('✔')}] API lookup success: ${JSON.stringify(body)}`)
+    logger.info(`[${colors.green('✔')}] API lookup success: ${body}`)
     return body
   } catch (error) {
     if (error instanceof Error) {
