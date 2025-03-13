@@ -39,7 +39,6 @@
     "colors": "^1.4.0",
     "masto": "^6.10.1",
     "reddit-wrapper-v2": "^1.1.6",
-    "sync-request": "^6.1.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
