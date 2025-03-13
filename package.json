@@ -20,7 +20,7 @@
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "test": "nyc mocha test"
+    "test": "node --test --loader ts-node/esm test/*.spec.ts"
   },
   "nyc": {
     "all": true,
