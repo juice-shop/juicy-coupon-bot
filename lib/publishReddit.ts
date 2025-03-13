@@ -5,18 +5,17 @@
 
 import logger from './logger.ts';
 import colors from 'colors';
-const RedditAPI = require('reddit-wrapper-v2');
-import { RedditAPIOptions } from './types/types.ts';
+import RedditAPI from 'reddit-wrapper-v2';
+import { IRedditAPIOptions } from 'reddit-wrapper-v2';
 
-const redditOptions: RedditAPIOptions = {
+const redditOptions: IRedditAPIOptions = {
   username: process.env.REDDIT_ACCOUNT_NAME!,
   password: process.env.REDDIT_ACCOUNT_PASSWORD!,
   app_id: process.env.REDDIT_APP_ID!,
   api_secret: process.env.REDDIT_APP_SECRET!
 };
 
-
-const R = new RedditAPI(redditOptions);
+const R = RedditAPI(redditOptions);
 
 const publishReddit = (text: string, title: string): void => {
   if (process.env.PUBLISHING_MODE) {
