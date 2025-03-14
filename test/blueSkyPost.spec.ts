@@ -6,18 +6,11 @@
 import { test } from 'node:test';
 import assert from 'node:assert';
 import blueSkyPost from '../lib/blueSkyPost.ts';
-
-const defaultParams = {
-  discount: 20,
-  coupon: ':COUPON:',
-  expiryDate: ':EXPIRATION:'
-};
+import defaultParams from './testUtils.ts';
 
 test('should always include robot emoji', () => {
   for (let i = 0; i < 100; i++) {
-    const result = blueSkyPost(defaultParams);
-    console.log(`Test iteration ${i}: ${result}`);
-    assert.ok(result.includes('[🤖]'), 'Expected to include robot emoji');
+    assert.ok(blueSkyPost(defaultParams).includes('[🤖]'), 'Expected to include robot emoji');
   }
 });
 
