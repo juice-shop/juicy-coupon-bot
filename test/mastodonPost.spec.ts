@@ -22,7 +22,7 @@ test('Mastodon post should always include #coupon hashtag', () => {
 
 test('Mastodon post should always mention discount amount', () => {
   for (let i = 10; i < 40; i++) {
-    assert.ok(mastodonPost(defaultParams).includes(i + '%'))
+    assert.ok(mastodonPost({ discount: i, coupon: ':COUPON:', expiryDate: ':EXPIRATION:' }).includes(i + '%'))
   }
 })
 

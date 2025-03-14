@@ -13,8 +13,8 @@ import publishMastodon from './lib/publishMastodon.ts'
 import publishReddit from './lib/publishReddit.ts'
 import { PostParameters } from './lib/types/types.ts'
 
-const distributeCoupons = (): void => {
-  const { expiryDate, discountCodes } = currentCoupons()
+const distributeCoupons = async(): Promise<void> => {
+  const { expiryDate, discountCodes } = await currentCoupons()
   const discount = randomDiscount()
   const coupon = discountCodes[discount + '%']
 
