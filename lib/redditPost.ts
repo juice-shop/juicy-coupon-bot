@@ -5,7 +5,7 @@
 
 import logger from "./logger.ts";
 import colors from "colors";
-import { PostParameters } from "./types/types.ts";
+import { type PostParameters } from "./types/types.ts";
 import generateCouponMessage from "./utils/generateCoupon.ts";
 
 const prepareRedditPost = (params: PostParameters): string => {
