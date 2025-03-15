@@ -13,7 +13,8 @@
   "include": [
     "lib/**/*.ts",
     "index.ts",
-    "bin"
+    "bin",
+    "test/**/*.ts",
   ],
   "exclude": [
     "node_modules",
