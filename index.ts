@@ -20,8 +20,8 @@ const distributeCoupons = async (): Promise<void> => {
 
   const postParams: PostParameters = { discount, coupon, expiryDate };
 
-  publishBlueSky(blueSkyPost(postParams));
-  publishMastodon(mastodonPost(postParams));
+  await publishBlueSky(blueSkyPost(postParams));
+  await publishMastodon(mastodonPost(postParams));
   publishReddit(redditPost(postParams), `New coupon code (valid until ${expiryDate})`);
 };
 

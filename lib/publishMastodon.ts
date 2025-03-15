@@ -8,8 +8,8 @@ import colors from "colors";
 import { createRestAPIClient } from "masto";
 
 const masto = createRestAPIClient({
-  url: process.env.MASTODON_URL!,
-  accessToken: process.env.MASTODON_TOKEN!
+  url: process.env.MASTODON_URL ?? "",
+  accessToken: process.env.MASTODON_TOKEN ?? ""
 });
 
 const publishMastodon = async (status: string): Promise<void> => {

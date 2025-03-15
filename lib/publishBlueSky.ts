@@ -13,8 +13,8 @@ const publishBlueSky = async (post: string): Promise<void> => {
   if (process.env.PUBLISHING_MODE) {
     try {
       await agent.login({
-        identifier: process.env.BLUESKY_IDENTIFIER!,
-        password: process.env.BLUESKY_PASSWORD!
+        identifier: process.env.BLUESKY_IDENTIFIER ?? "",
+        password: process.env.BLUESKY_PASSWORD ?? ""
       });
 
       if (!agent.session) {
