@@ -6,7 +6,7 @@
 import { test } from "node:test";
 import assert from "node:assert";
 import redditComment from "../lib/redditPost.ts";
-import defaultParams from "./testUtils.ts";
+import defaultParams from './utils/testUtils.ts';
 
 test("Reddit comment should always contain discount amount in bold text", () => {
   for (let i = 10; i <= 40; i++) {

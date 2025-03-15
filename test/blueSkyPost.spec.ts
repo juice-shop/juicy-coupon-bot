@@ -6,7 +6,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert';
 import blueSkyPost from '../lib/blueSkyPost.ts';
-import defaultParams from './testUtils.ts';
+import defaultParams from './utils/testUtils.ts';
 
 test('should always include robot emoji', () => {
   for (let i = 0; i < 100; i++) {
