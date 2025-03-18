@@ -13,9 +13,9 @@
   },
   "license": "MIT",
   "author": "Bjoern Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
-  "main": "index.js",
+  "main": "index.ts",
   "bin": {
-    "juicy-coupon-bot": "bin/juicy-coupon-bot.js"
+    "juicy-coupon-bot": "bin/juicy-coupon-bot.ts"
   },
   "scripts": {
     "lint": "eslint index.ts bin lib --ext .ts",
@@ -48,27 +48,11 @@
     "coveralls": "^3.1.0",
     "eslint": "^8.57.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-n": "^17.16.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^7.2.1",
-    "standard": "^17.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.2.2"
   },
   "engines": {
     "node": "18 - 22"
   },
-  "preferGlobal": true,
-  "standard": {
-    "env": [
-      "node",
-      "mocha"
-    ],
-    "globals": [
-      "it",
-      "describe",
-      "beforeEach"
-    ]
-  }
+  "preferGlobal": true
 }
