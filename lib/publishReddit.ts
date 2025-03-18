@@ -17,7 +17,7 @@ const redditOptions: IRedditAPIOptions = {
 const R = RedditAPI(redditOptions);
 
 const publishReddit = (text: string, title: string): void => {
-  if (process.env.PUBLISHING_MODE) {
+  if (process.env.PUBLISHING_MODE === "true") {
     R.api.post("/api/submit", { api_type: "json", sr: "owasp_juiceshop", kind: "self", title, text })
       .then((res: Record<number, { json: { data: { url: string } } }>) => {
         logger.info(`[${colors.green("✔")}] Reddit post published: ${res[1]?.json?.data?.url}`);

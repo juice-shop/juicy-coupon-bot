@@ -13,7 +13,7 @@ const masto = createRestAPIClient({
 });
 
 const publishMastodon = async (status: string): Promise<void> => {
-  if (process.env.PUBLISHING_MODE) {
+  if (process.env.PUBLISHING_MODE === "true") {
     try {
       const res = await masto.v1.statuses.create({ status });
       logger.info(`[${colors.green("✔")}] Mastodon post published: ${res?.url}`);

@@ -10,14 +10,14 @@ import { AtpAgent } from "@atproto/api";
 const agent = new AtpAgent({ service: "https://bsky.social" });
 
 const publishBlueSky = async (post: string): Promise<void> => {
-  if (process.env.PUBLISHING_MODE) {
+  if (process.env.PUBLISHING_MODE === "true") {
     try {
       await agent.login({
         identifier: process.env.BLUESKY_IDENTIFIER ?? "",
         password: process.env.BLUESKY_PASSWORD ?? ""
       });
 
-      if (!agent.session) {
+      if (agent.session == null) {
         throw new Error("Agent session is not initialized");
       }
 
