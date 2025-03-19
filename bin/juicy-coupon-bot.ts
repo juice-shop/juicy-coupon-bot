@@ -5,9 +5,9 @@
  * SPDX-License-Identifier: MIT
  */
 
-import logger from "../lib/logger.ts"
-import colors from "colors"
-import juicyCouponBot from "../index.ts"
+import logger from '../lib/logger.ts'
+import colors from 'colors'
+import juicyCouponBot from '../index.ts'
 
 void (async () => {
   try {
@@ -15,11 +15,11 @@ void (async () => {
   } catch (error) {
     if (error instanceof Error) {
       logger.error(
-        `[${colors.red("💀")}] Critical error: ${colors.red(error.message)}`
+        `[${colors.red('💀')}] Critical error: ${colors.red(error.message)}`
       )
     } else {
       logger.error(
-        `[${colors.red("💀")}] Critical error: ${colors.red("Unknown error")}`
+        `[${colors.red('💀')}] Critical error: ${colors.red('Unknown error')}`
       )
     }
   }

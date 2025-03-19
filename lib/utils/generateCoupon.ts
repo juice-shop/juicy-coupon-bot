@@ -1,4 +1,4 @@
-import { type PostParameters } from "../types/types.ts"
+import { type PostParameters } from '../types/types.ts'
 
 const generateCouponMessage = ({ discount, coupon, expiryDate }: PostParameters): string => {
   const texts: string[] = [

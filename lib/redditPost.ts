@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-import logger from "./logger.ts"
-import colors from "colors"
-import { type PostParameters } from "./types/types.ts"
-import generateCouponMessage from "./utils/generateCoupon.ts"
+import logger from './logger.ts'
+import colors from 'colors'
+import { type PostParameters } from './types/types.ts'
+import generateCouponMessage from './utils/generateCoupon.ts'
 
 const prepareRedditPost = (params: PostParameters): string => {
   const { discount, coupon } = params
@@ -19,7 +19,7 @@ const prepareRedditPost = (params: PostParameters): string => {
   status = status.replace(couponText, `\`${couponText}\``)
 
   logger.info(
-    `[${colors.green("✔")}] Reddit post prepared: ${colors.cyan(status)}`
+    `[${colors.green('✔')}] Reddit post prepared: ${colors.cyan(status)}`
   )
   return status
 }
