@@ -22,13 +22,4 @@ module.exports = {
     ".nyc_output/**",
     "dist/**",
   ],
-  overrides: [
-    {
-      files: ["**/*.ts"],
-      rules: {
-        "@typescript-eslint/quotes": ["error", "double"],
-        "@typescript-eslint/semi": ["error", "always"],
-      },
-    },
-  ],
 };
