@@ -3,18 +3,23 @@
  * SPDX-License-Identifier: MIT
  */
 
-const logger = require('./logger')
-const colors = require('colors')
-const { AtpAgent } = require('@atproto/api')
+import logger from './logger.ts'
+import colors from 'colors'
+import { AtpAgent } from '@atproto/api'
+
 const agent = new AtpAgent({ service: 'https://bsky.social' })
 
-module.exports = async (post) => {
-  if (process.env.PUBLISHING_MODE) {
+const publishBlueSky = async (post: string): Promise<void> => {
+  if (process.env.PUBLISHING_MODE === 'true') {
     try {
       await agent.login({
-        identifier: process.env.BLUESKY_IDENTIFIER,
-        password: process.env.BLUESKY_PASSWORD
+        identifier: process.env.BLUESKY_IDENTIFIER ?? '',
+        password: process.env.BLUESKY_PASSWORD ?? ''
       })
+
+      if (agent.session == null) {
+        throw new Error('Agent session is not initialized')
+      }
 
       const res = await agent.api.com.atproto.repo.createRecord({
         repo: agent.session.did,
@@ -27,9 +32,15 @@ module.exports = async (post) => {
 
       logger.info(`[${colors.green('✔')}] BlueSky post published: ${res?.data?.uri}`)
     } catch (error) {
-      logger.warn(`[${colors.red('❌')}] BlueSky post failed: ${colors.red(error)}`)
+      if (error instanceof Error) {
+        logger.warn(`[${colors.red('❌')}] BlueSky post failed: ${colors.red(error.message)}`)
+      } else {
+        logger.warn(`[${colors.red('❌')}] BlueSky post failed with unknown error`)
+      }
     }
   } else {
     logger.info(`[${colors.yellow('🟡')}] BlueSky post skipped: ${colors.yellow('Post will only be published when PUBLISHING_MODE is set as an environment variable')}`)
   }
 }
+
+export default publishBlueSky

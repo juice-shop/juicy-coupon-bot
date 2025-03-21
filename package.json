@@ -2,6 +2,7 @@
   "name": "juicy-coupon-bot",
   "version": "2.1.0",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
+  "type": "module",
   "homepage": "http://owasp-juice.shop",
   "bugs": {
     "url": "https://github.com/juice-shop/juicy-coupon-bot/issues"
@@ -12,20 +13,20 @@
   },
   "license": "MIT",
   "author": "Bjoern Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
-  "main": "index.js",
+  "main": "index.ts",
   "bin": {
-    "juicy-coupon-bot": "bin/juicy-coupon-bot.js"
+    "juicy-coupon-bot": "bin/juicy-coupon-bot.ts"
   },
   "scripts": {
-    "lint": "standard",
-    "lint:fix": "standard --fix",
-    "test": "nyc mocha test"
+    "lint": "eslint index.ts bin lib --ext .ts",
+    "lint:fix": "eslint index.ts bin lib --ext .ts --fix",
+    "test": "node --test --loader ts-node/esm test/*.spec.ts"
   },
   "nyc": {
     "all": true,
     "include": [
-      "lib/*.js",
-      "index.js"
+      "lib/*.ts",
+      "index.ts"
     ],
     "report-dir": "./build/reports/coverage",
     "reporter": [
@@ -38,29 +39,20 @@
     "colors": "^1.4.0",
     "masto": "^6.10.1",
     "reddit-wrapper-v2": "^1.1.6",
-    "sync-request": "^6.1.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "coveralls": "^3.1.0",
-    "mocha": "^7.2.0",
-    "nyc": "^15.1.0",
-    "standard": "^14.3.4"
+    "eslint": "^8.57.1",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2"
   },
   "engines": {
     "node": "18 - 22"
   },
-  "preferGlobal": true,
-  "standard": {
-    "env": [
-      "node",
-      "mocha"
-    ],
-    "globals": [
-      "it",
-      "describe",
-      "beforeEach"
-    ]
-  }
+  "preferGlobal": true
 }

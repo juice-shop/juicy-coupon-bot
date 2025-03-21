@@ -26,7 +26,7 @@ jobs:
           node-version: 20
           cache: npm
       - name: "Install application"
-        run: npm install --ignore-scripts
+        run: npm install --ignore-scripts 
       - name: "Lint code"
         run: npm run lint
   test:
@@ -48,7 +48,7 @@ jobs:
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
       - name: "Install application"
-        run: npm install
+        run: npm install 
       - name: "Execute unit tests"
         run: npm test
       - name: "Publish coverage to Coveralls"
