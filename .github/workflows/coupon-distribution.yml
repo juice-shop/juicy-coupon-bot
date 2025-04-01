@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "PUBLISHING_MODE=true" >> $GITHUB_ENV
       - name: "Distribute coupons"
-        run: juicy-coupon-bot
+        run: npx tsx $(npm root -g)/juicy-coupon-bot/bin/juicy-coupon-bot.ts
         env:
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
