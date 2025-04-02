@@ -1,6 +1,6 @@
 {
   "name": "juicy-coupon-bot",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
   "type": "module",
   "homepage": "http://owasp-juice.shop",
