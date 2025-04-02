@@ -39,4 +39,4 @@ npx tsx $(npm root -g)/juicy-coupon-bot/bin/juicy-coupon-bot.ts
 This program is free software: you can redistribute it and/or modify it
 under the terms of the [MIT license](LICENSE). Juicy Coupon Bot and any
 contributions are Copyright © by Bjoern Kimminich & the OWASP Juice Shop
-contributors 2019-2024.
+contributors 2019-2025.
