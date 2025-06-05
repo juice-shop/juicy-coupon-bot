@@ -5,7 +5,7 @@
 
 import { test } from "node:test";
 import assert from "node:assert";
-import currentCoupons from "../lib/currentCoupons.ts";
+import currentCoupons from "../lib/currentCoupons";
 
 test("API response contains expiration date of coupon", async () => {
   const coupons = await currentCoupons();

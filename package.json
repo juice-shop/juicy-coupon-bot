@@ -2,7 +2,7 @@
   "name": "juicy-coupon-bot",
   "version": "2.2.2",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
-  "type": "module",
+  "type": "commonjs",
   "homepage": "http://owasp-juice.shop",
   "bugs": {
     "url": "https://github.com/juice-shop/juicy-coupon-bot/issues"
@@ -15,12 +15,14 @@
   "author": "Bjoern Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
   "main": "index.ts",
   "bin": {
-    "juicy-coupon-bot": "bin/juicy-coupon-bot.ts"
+    "juicy-coupon-bot": "dist/bin/juicy-coupon-bot.js"
   },
   "scripts": {
+    "build": "tsc",  
+    "prepare": "npm run build",
     "lint": "eslint index.ts bin lib --ext .ts",
     "lint:fix": "eslint index.ts bin lib --ext .ts --fix",
-    "test": "c8 node --test --loader ts-node/esm test/*.spec.ts"
+    "test": "c8 npx tsx test/*.spec.ts"
   },
   "c8": {
     "all": true,
