@@ -15,8 +15,13 @@ export default async (apiEndpoint: string = 'https://5j4d1u7jhf.execute-api.eu-w
       }
     })
     const body = await res.json()
-    logger.info(`[${colors.green('✔')}] API lookup success: ${body}`)
-    return body
+    if (body.message) {
+      logger.warn(`[${colors.red('❌')}] API lookup denied: ${colors.red(body.message)}`)
+      throw new Error('API lookup denied')
+    } else {
+      logger.info(`[${colors.green('✔')}] API lookup success: ${JSON.stringify(body)}`)
+      return body
+    }
   } catch (error) {
     if (error instanceof Error) {
       logger.warn(`[${colors.red('❌')}] API lookup failed: ${colors.red(error.message)}`)
