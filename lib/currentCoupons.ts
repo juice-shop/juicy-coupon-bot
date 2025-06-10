@@ -15,8 +15,8 @@ export default async (apiEndpoint: string = 'https://5j4d1u7jhf.execute-api.eu-w
       }
     })
     const body = await res.json()
-    if (body.message) {
-      throw new Error(body.message)
+    if (body.message != null) {
+      throw new Error(body.message) // eslint-disable-line no-unsafe-argument
     } else {
       logger.info(`[${colors.green('✔')}] API lookup success: ${JSON.stringify(body)}`)
       return body
