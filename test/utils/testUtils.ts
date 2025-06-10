@@ -1,7 +1,7 @@
 const defaultParams = {
   discount: 10,
-  coupon: ":COUPON:",
-  expiryDate: ":EXPIRATION:"
-};
+  coupon: ':COUPON:',
+  expiryDate: ':EXPIRATION:'
+}
 
-export default defaultParams;
+export default defaultParams

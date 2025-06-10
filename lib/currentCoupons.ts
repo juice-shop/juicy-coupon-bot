@@ -6,9 +6,14 @@
 import logger from './logger.ts'
 import colors from 'colors'
 
-export default async (apiEndpoint: string = 'https://5j4d1u7jhf.execute-api.eu-west-1.amazonaws.com/default/JuicyCouponFunc'): Promise<{ expiryDate: string, discountCodes: Record<string, string> }> => {
+export default async (apiEndpoint: string = 'https://5j4d1u7jhf.execute-api.eu-west-1.amazonaws.com/default/JuicyCouponFunc', apiKey: string = '6PPi37DBxP4lDwlriuaxP15HaDJpsUXY5TspVmie'): Promise<{ expiryDate: string, discountCodes: Record<string, string> }> => {
   try {
-    const res = await fetch(apiEndpoint)
+    const res = await fetch(apiEndpoint, {
+      method: 'GET',
+      headers: {
+        'X-API-Key': apiKey
+      }
+    })
     const body = await res.json()
     logger.info(`[${colors.green('✔')}] API lookup success: ${body}`)
     return body
