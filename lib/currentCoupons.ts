@@ -6,7 +6,7 @@
 import logger from './logger.ts'
 import colors from 'colors'
 
-export default async (apiEndpoint: string = 'https://5j4d1u7jhf.execute-api.eu-west-1.amazonaws.com/default/JuicyCouponFunc', apiKey: string = process.env.AWS_API_KEY): Promise<{ expiryDate: string, discountCodes: Record<string, string> }> => {
+export default async (apiEndpoint: string = 'https://5j4d1u7jhf.execute-api.eu-west-1.amazonaws.com/default/JuicyCouponFunc', apiKey: string = process.env.AWS_API_KEY ?? ''): Promise<{ expiryDate: string, discountCodes: Record<string, string> }> => {
   try {
     const res = await fetch(apiEndpoint, {
       method: 'GET',
