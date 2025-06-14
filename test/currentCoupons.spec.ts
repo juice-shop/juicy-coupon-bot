@@ -5,6 +5,10 @@
 
 /* eslint-disable @typescript-eslint/no-floating-promises */
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd37ec5 (add eslint to test files)
 import { test } from 'node:test'
 import assert from 'node:assert'
 import currentCoupons from '../lib/currentCoupons.ts'
