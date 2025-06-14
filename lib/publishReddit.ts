@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-import logger from './logger.ts'
+import logger from './logger'
 import colors from 'colors'
 import RedditAPI, { type IRedditAPIOptions } from 'reddit-wrapper-v2'
 

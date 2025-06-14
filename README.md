@@ -20,7 +20,7 @@ npm install -g juicy-coupon-bot
 Run...
 
 ```
-npx tsx $(npm root -g)/juicy-coupon-bot/bin/juicy-coupon-bot.ts
+juicy-coupon-bot
 ```
 
 ...and it's done!
