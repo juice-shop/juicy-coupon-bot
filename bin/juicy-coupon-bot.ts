@@ -5,9 +5,9 @@
  * SPDX-License-Identifier: MIT
  */
 
-import logger from '../lib/logger.ts'
+import logger from '../lib/logger'
 import colors from 'colors'
-import juicyCouponBot from '../index.ts'
+import juicyCouponBot from '../index'
 
 void (async () => {
   try {
