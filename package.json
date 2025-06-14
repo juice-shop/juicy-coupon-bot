@@ -18,8 +18,8 @@
     "juicy-coupon-bot": "bin/juicy-coupon-bot.ts"
   },
   "scripts": {
-    "lint": "eslint index.ts bin lib --ext .ts",
-    "lint:fix": "eslint index.ts bin lib --ext .ts --fix",
+    "lint": "eslint index.ts bin lib test/*.spec.ts --ext .ts",
+    "lint:fix": "eslint index.ts bin lib test/*.spec.ts --ext .ts --fix",
     "test": "c8 node --test --loader ts-node/esm test/*.spec.ts"
   },
   "c8": {
