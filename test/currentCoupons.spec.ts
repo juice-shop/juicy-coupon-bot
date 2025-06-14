@@ -6,10 +6,12 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cd37ec5 (add eslint to test files)
-import { test } from 'node:test'
+=======
+>>>>>>> 7023818 (minor lint fiximport { test } from 'node:test'
 import assert from 'node:assert'
 import currentCoupons from '../lib/currentCoupons.ts'
 
