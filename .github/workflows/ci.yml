@@ -21,7 +21,7 @@ jobs:
       - name: "Check out Git repository"
         uses: actions/checkout@v2
       - name: "Use Node.js 22"
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
@@ -35,7 +35,7 @@ jobs:
       - name: "Check out Git repository"
         uses: actions/checkout@v2
       - name: "Use Node.js 22"
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
@@ -51,6 +51,8 @@ jobs:
         run: npm install
       - name: "Execute unit tests"
         run: npm test
+        env:
+          AWS_API_KEY: ${{ secrets.AWS_API_KEY }}
       - name: "Publish coverage to Coveralls"
         if: github.event_name == 'push'
         uses: coverallsapp/github-action@master
