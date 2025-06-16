@@ -22,7 +22,7 @@
     "prepare": "npm run build",
     "lint": "eslint index.ts bin lib --ext .ts",
     "lint:fix": "eslint index.ts bin lib --ext .ts --fix",
-    "test": "c8 npx tsx test/*.spec.
+    "test": "c8 npx tsx test/*.spec.ts"
   },
   "c8": {
     "all": true,
