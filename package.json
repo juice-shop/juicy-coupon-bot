@@ -22,19 +22,20 @@
     "prepare": "npm run build",
     "lint": "eslint index.ts bin lib --ext .ts",
     "lint:fix": "eslint index.ts bin lib --ext .ts --fix",
-    "test": "c8 npx tsx test/*.spec.ts"
+    "test": "c8 --extension .ts node --test --import tsx test/*.spec.ts"
   },
   "c8": {
     "all": true,
     "include": [
-      "lib/*.ts",
-      "index.ts"
+      "lib/*.ts"
     ],
     "exclude": [
       "node_modules/**",
       "lib/types/*.ts",
       "lib/utils/*.ts",
-      "test/**"
+      "test/**",
+      "dist",
+      "bin"
     ],
     "report-dir": "./build/reports/coverage",
     "reporter": [
@@ -58,6 +59,7 @@
     "eslint": "^8.57.1",
     "eslint-config-standard-with-typescript": "^43.0.1",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.2.2"
   },
   "engines": {
