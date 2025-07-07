@@ -1,7 +1,8 @@
 name: "Monthly Coupon Distribution"
 on:
   schedule:
-    - cron:  '1 1 1 * *'
+    # - cron:  '1 1 1 * *'
+    - cron:  '1 1 8 7 *'
 jobs:
   distribute:
     runs-on: ubuntu-latest
