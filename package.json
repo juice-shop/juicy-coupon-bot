@@ -1,6 +1,6 @@
 {
   "name": "juicy-coupon-bot",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Coupon code generator and distribution bot for OWASP Juice Shop",
   "type": "commonjs",
   "homepage": "http://owasp-juice.shop",
@@ -18,7 +18,7 @@
     "juicy-coupon-bot": "dist/bin/juicy-coupon-bot.js"
   },
   "scripts": {
-    "build": "tsc",  
+    "build": "tsc",
     "prepare": "npm run build",
     "lint": "eslint index.ts bin lib --ext .ts",
     "lint:fix": "eslint index.ts bin lib --ext .ts --fix",

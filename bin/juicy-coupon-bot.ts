@@ -22,5 +22,6 @@ void (async () => {
         `[${colors.red('💀')}] Critical error: ${colors.red('Unknown error')}`
       )
     }
+    process.exit(1)
   }
 })()
