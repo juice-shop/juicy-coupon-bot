@@ -2,7 +2,7 @@ name: "Monthly Coupon Distribution"
 on:
   schedule:
     # - cron:  '1 1 1 * *'
-    - cron:  '1 1 8 7 *'
+    - cron:  '1 1 9 7 *'
 jobs:
   distribute:
     runs-on: ubuntu-latest
@@ -21,6 +21,7 @@ jobs:
       - name: "Distribute coupons"
         run: juicy-coupon-bot
         env:
+          AWS_API_KEY: ${{ secrets.AWS_API_KEY }}
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           REDDIT_ACCOUNT_NAME: ${{ secrets.REDDIT_ACCOUNT_NAME }}
